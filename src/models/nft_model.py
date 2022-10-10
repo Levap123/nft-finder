@@ -1,5 +1,5 @@
-from src.db import db
 from sqlalchemy_serializer import SerializerMixin
+from src.db import db
 
 
 class NftModel(db.Model, SerializerMixin):

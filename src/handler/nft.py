@@ -3,7 +3,8 @@ import json
 from flask import request, make_response, render_template
 from flask_restful import Resource
 import requests
-from src.models.nftmodel import NftModel
+from src.models.nft_model import NftModel
+from src.config import Config
 
 
 class Nft(Resource):
@@ -17,7 +18,6 @@ class Nft(Resource):
         # set content type for html rendering
         headers = {
             "Content-Type": "text/html",
-
         }
 
         # search in db
@@ -37,8 +37,8 @@ class Nft(Resource):
                 'network': 'mainnet-beta'
             },
             headers={
-                'APISecretKey': 'cLLuQFfSTEWwfDD',
-                'APIKeyId': 'QhWaegPvml7LnxB'
+                'APISecretKey': Config.api_key,
+                'APIKeyId': Config.api_id
             }
         )
 
@@ -60,4 +60,4 @@ class Nft(Resource):
         nft_model = NftModel(**payload)
 
         nft_model.save_to_db()
-        return make_response(render_template('nft_info.html', payload=payload), headers)
+        return make_response(render_template('nft_info.html', payload=json.dumps(payload)), headers)
