@@ -3,4 +3,4 @@ from src.config import Config
 
 if __name__ == '__main__':
     app = create_app('flask.cfg')
-    app.run(debug=True, port=Config.port)
+    app.run(debug=False)

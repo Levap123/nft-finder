@@ -4,8 +4,9 @@ from src.handler.home import Home
 from src.handler.nft import Nft
 from src.config import Config
 from src.db import db
+from flask_migrate import Migrate
 
-
+migrate = Migrate()
 api = Api()
 
 username = Config.user_db
@@ -16,6 +17,7 @@ dbname = Config.dbname
 def create_app(config_filename=None):
     app = Flask(__name__, static_url_path='/static')
     api = initialize_api(app)
+    migrate.init_app(app, db)
     register_resources(api)
     config_db(app, db)
     return app
