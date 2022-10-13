@@ -1,8 +1,8 @@
 import json
+import requests
 
 from flask import request, make_response, render_template
 from flask_restful import Resource
-import requests
 from src.models.nft_model import NftModel
 from src.config import Config
 
