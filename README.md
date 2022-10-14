@@ -9,7 +9,7 @@ NFT-FINDER is a building on flask web service with which you can get information
 2. Use the [git clone](https://git-scm.com/docs/git-clone) command
 
 ```bash
-git clone https://github.com/Levap123/ass3.git
+git clone https://github.com/Levap123/nft-finder
 ```
 3. Go to src directory
 ```bash
