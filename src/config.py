@@ -11,4 +11,4 @@ class Config:
     password_db = os.getenv("PASSWORD_DB")
     api_key = os.getenv("API_SECRET_KEY")
     api_id = os.getenv("API_KEY_ID")
-    port = "8080"
+    port = "5000"
