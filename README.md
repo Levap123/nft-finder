@@ -3,7 +3,9 @@
 
 NFT-FINDER is a building on flask web service with which you can get information about the NFT from the solana blockchain using the address!
 
-## Installation
+## Installation 
+
+#### For Windows
 1. Use the [git clone](https://git-scm.com/docs/git-clone) command
 ```bash
 git clone https://github.com/Levap123/nft-finder
