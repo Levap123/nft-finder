@@ -60,4 +60,4 @@ class Nft(Resource):
         nft_model = NftModel(**payload)
 
         nft_model.save_to_db()
-        return make_response(render_template('nft_info.html', payload=json.dumps(payload)), headers)
+        return make_response(render_template('nft_info.html', payload=payload), headers)
