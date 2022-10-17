@@ -72,7 +72,10 @@ cd src
 ```bash
 flask --app app.py run
 ```
-## Example
+## Examples
+![image](https://user-images.githubusercontent.com/96424716/196116790-dcf7f113-14ba-411b-bb76-33f6db6b3180.png)
+![image](https://user-images.githubusercontent.com/96424716/196117042-6ec1a6f3-ddb0-40da-ac20-11adcd448fc6.png)
+
 
 ## License
 [GNU General Public License v3.0
