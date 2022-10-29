@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NFT search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+{% include 'header.html' %}
+<h1 class="white">Hello, {{payload.user}}, enter nft address and get information about it!</h1>
+<form  action="{{url_for('nft')}}" method="get">
+    <input align="center" type="text" placeholder="NFT address..." name="q"/>
+    <button>Search!</button>
+</form>
+
+</body>
+</html>

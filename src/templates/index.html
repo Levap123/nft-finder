@@ -7,15 +7,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NFT search</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
 </head>
 <body>
-<h1>Enter nft address and get information about it!</h1>
-<form action="{{url_for('nft')}}" method="get">
-    <input type="text" placeholder="NFT address..." name="q"/>
-    <button>Search!</button>
-</form>
+{% include 'header.html' %}
+<h1 class='white' align="center">NFT-FINDER</h1>
+<p>NFT-FINDER is a building on flask web service with which you can get information about the NFT from the solana
+    blockchain using the address!</p>
 
 </body>
 </html>

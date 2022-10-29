@@ -1,7 +1,9 @@
 from flask import Flask
 from flask_restful import Api
-from src.handler.home import Home
+from src.handler.search import Search
 from src.handler.nft import Nft
+from src.handler.auth import Register, Login
+from src.handler.home import Home
 from src.config import Config
 from src.db import db
 from flask_migrate import Migrate
@@ -29,8 +31,11 @@ def initialize_api(app):
 
 
 def register_resources(api):
+    api.add_resource(Register, "/api/user/signup")
+    api.add_resource(Search, "/api/search")
+    api.add_resource(Nft, "/api/nft")
     api.add_resource(Home, "/")
-    api.add_resource(Nft, "/api/v1/nft")
+    api.add_resource(Login, "/api/user/signin")
 
 
 def config_db(app, db):
