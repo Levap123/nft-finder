@@ -30,7 +30,10 @@ class Register(Resource):
 class Login(Resource):
     def post(self):
         name = request.form['username']
-        user = UserModel.check_pass(name, request.form['password'])
+        try:
+            user = UserModel.check_pass(name, request.form['password'])
+        except:
+            return "user not found"
         if user is None:
             return "bad credentials"
         token = generate_token(name)

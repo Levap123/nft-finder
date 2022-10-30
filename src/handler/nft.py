@@ -5,11 +5,14 @@ from flask import request, make_response, render_template
 from flask_restful import Resource
 from src.models.nft_model import NftModel
 from src.config import Config
+from src.models.user_model import parse_token
 
 
 class Nft(Resource):
 
     def get(self):
+        if parse_token() is None:
+            return "not authorized"
         # get argument from params
         args = request.args
         # nft address
